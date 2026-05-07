@@ -11,44 +11,33 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+
+        appBar: AppBar(
+          title: const Text('2 x 2 정사각형'),
+          backgroundColor: Colors.blue,
+        ),
+
         body: Column(
           children: [
-
             Expanded(
-                flex: 3,
-                child: Container(
-                  color: Colors.blue[100],
+                child: Row(
+                  children: [
+                    Expanded(child: Container(color: Colors.red,)),
+                    Expanded(child: Container(color: Colors.green,)),
+                  ],
                 )
             ),
             Expanded(
-                flex: 1,
-                child: Container(
-                  color: Colors.orange[100],
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    // crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Icon(
-                        Icons.settings,
-                        size: 40,
-                        color: Colors.blue,
-                      ),
-                      Icon(
-                        Icons.person,
-                        size: 40,
-                        color: Colors.red,
-                      ),
-                    ],
-                  ),
+                child: Row(
+                  children: [
+                    Expanded(child: Container(color: Colors.blue,)),
+                    Expanded(child: Container(color: Colors.orange,)),
+                  ],
                 )
-            )
-
-
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
